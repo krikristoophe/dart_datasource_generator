@@ -1,0 +1,22 @@
+name: dart_datasource_generator_exemple
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+# Add regular dependencies here.
+dependencies:
+  build_runner: ^2.4.6
+  dart_datasource_models: ^0.0.1
+
+dependency_overrides:
+  dart_datasource_models:
+    path: ../../dart_datasource_models/
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.21.0
+  dart_datasource_generator:
+    path: ..

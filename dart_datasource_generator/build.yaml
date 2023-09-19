@@ -1,0 +1,16 @@
+targets:
+  $default:
+    builders: 
+      dart_datasource_generator:
+        enabled: true
+
+builders:
+  dart_datasource_generator:
+    target: ":dart_datasource_generator"
+    import: "package:dart_datasource_generator/src/builder.dart"
+    builder_factories: ["datasourceReporter"]
+    build_extensions: {".dart": [".ddg.dart"]}
+    auto_apply: dependents
+    build_to: source
+    
+    applies_builders: ["source_gen|combining_builder"]
