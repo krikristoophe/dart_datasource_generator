@@ -13,3 +13,7 @@
 - read json body function
 - map exceptions
 - manage primitive types (String, int)
+
+## 0.0.2
+
+- update repository url
