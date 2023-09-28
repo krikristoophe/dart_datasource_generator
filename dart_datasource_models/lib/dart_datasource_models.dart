@@ -8,6 +8,7 @@ export 'dart:convert' show json;
 export 'src/abstract_classes/datasource.dart';
 export 'src/abstract_classes/environnement.dart';
 export 'src/abstract_classes/repository.dart';
+export 'src/annotations/dart_generator_model.dart';
 export 'src/annotations/dart_generator_request.dart';
 export 'src/annotations/datasources.dart';
 export 'src/annotations/repository.dart';

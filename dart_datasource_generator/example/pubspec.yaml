@@ -10,6 +10,10 @@ environment:
 dependencies:
   build_runner: ^2.4.6
   dart_datasource_models: ^0.0.1
+  freezed_annotation: ^2.4.1
+  isar: ^3.1.0+1
+  isar_generator: ^3.1.0+1
+  json_serializable: ^6.7.1
 
 dependency_overrides:
   dart_datasource_models:

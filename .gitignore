@@ -1,3 +1,6 @@
 *.g.dart
 *.freezed.dart
 *.ddg.dart
+*.ddgm.dart
+*.ddgm.hive.dart
+*.ddgm.isar.dart

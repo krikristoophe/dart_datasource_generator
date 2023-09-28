@@ -26,7 +26,28 @@
   - [ ] double
   - [ ] bool
   - [ ] num
+  - [ ] enum
+- Manage http client error (fail lookup)
 
 ### Local datasource
 
 - [ ] all
+
+### Models
+
+- [x] Generate Model
+- [x] Generate Remote dto
+- [x] Generate Local dto
+- [x] Generate Isar dto
+- [x] Generate Hive dto
+- [x] Manage fields from factory
+- [ ] Manage fields from multiple type
+  - [x] enum
+  - [ ] objects
+- [ ] Manage String id
+- [x] Manage JsonKey
+- [x] Generate toDto, fromBusiness for List of model 
+- [ ] Make remote datasource use Remote model
+- [ ] Make local datasource use Local model
+- [ ] Generate hive box
+- [ ] Generate hive requests

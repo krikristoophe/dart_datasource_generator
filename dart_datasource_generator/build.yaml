@@ -3,6 +3,12 @@ targets:
     builders: 
       dart_datasource_generator:
         enabled: true
+      dart_models_generator:
+        enabled: true
+      dart_hive_models_generator:
+        enabled: true
+      dart_isar_models_generator:
+        enabled: true
 
 builders:
   dart_datasource_generator:
@@ -12,5 +18,35 @@ builders:
     build_extensions: {".dart": [".ddg.dart"]}
     auto_apply: dependents
     build_to: source
-    
     applies_builders: ["source_gen|combining_builder"]
+
+  dart_models_generator:
+    target: ":dart_models_generator"
+    import: "package:dart_datasource_generator/src/builder.dart"
+    builder_factories: ["modelsReporter"]
+    build_extensions: {".dart": [".ddgm.dart"]}
+    auto_apply: dependents
+    build_to: source
+    runs_before: ["freezed|freezed"]
+    applies_builders: ["source_gen|combining_builder", "freezed"]
+  
+  dart_hive_models_generator:
+    target: ":dart_hive_models_generator"
+    import: "package:dart_datasource_generator/src/builder.dart"
+    builder_factories: ["hiveModelsReporter"]
+    build_extensions: {".dart": [".hive.dart"]}
+    auto_apply: dependents
+    build_to: source
+    runs_before: ["freezed|freezed"]
+    applies_builders: ["source_gen|combining_builder", "freezed"]
+  
+  dart_isar_models_generator:
+    target: ":dart_isar_models_generator"
+    import: "package:dart_datasource_generator/src/builder.dart"
+    builder_factories: ["isarModelsReporter"]
+    build_extensions: {".dart": [".isar.dart"]}
+    auto_apply: dependents
+    build_to: source
+    runs_before: ["freezed|freezed"]
+    applies_builders: ["source_gen|combining_builder", "isar_generator"]
+
