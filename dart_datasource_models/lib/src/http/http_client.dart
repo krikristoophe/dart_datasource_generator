@@ -173,7 +173,11 @@ class HttpClient extends HttpClientBase {
       }
     } else {
       if (requestParameters.body is Map) {
-        body = json.encode(requestParameters.body);
+        final Map<dynamic, dynamic> requestBody =
+            requestParameters.body as Map<dynamic, dynamic>;
+        body = json.encode(
+          requestBody..removeWhere((key, value) => value == null),
+        );
         request.headers.putIfAbsent(
           'content-type',
           () => 'application/json',

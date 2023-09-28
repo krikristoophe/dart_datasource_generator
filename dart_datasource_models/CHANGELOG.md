@@ -9,3 +9,7 @@
 ## 0.0.3
 
 - rebuild sources
+
+## 0.0.4
+
+- Http client remove null values from map body
