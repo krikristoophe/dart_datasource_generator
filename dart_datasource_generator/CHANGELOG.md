@@ -17,3 +17,7 @@
 ## 0.0.2
 
 - update repository url
+
+## 0.0.3
+
+- update pubspec to accept more models version

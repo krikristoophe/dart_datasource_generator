@@ -13,3 +13,7 @@
 ## 0.0.4
 
 - Http client remove null values from map body
+
+## 0.0.5
+
+- Update logger to work on web
