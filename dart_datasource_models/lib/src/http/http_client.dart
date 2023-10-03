@@ -9,6 +9,7 @@ import 'package:easy_dart_logger/easy_dart_logger.dart';
 import 'package:http/http.dart' as http;
 
 export 'package:http/http.dart' show MultipartFile;
+export 'package:http_parser/http_parser.dart' show MediaType;
 
 /// Base definition of HttpClient used to make requests
 abstract class HttpClientBase {

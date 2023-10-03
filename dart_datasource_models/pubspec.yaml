@@ -2,7 +2,7 @@ name: dart_datasource_models
 
 description: Define all models, annotations and classes used with dart_datasource_generator.
 
-version: 0.0.5
+version: 0.0.6
 
 repository: https://github.com/krikristoophe/dart_datasource_generator/tree/master/dart_datasource_models
 
@@ -13,6 +13,7 @@ dependencies:
   easy_dart_logger: ^1.0.3+1
   freezed_annotation: ^2.4.1
   http: ^1.0.0
+  http_parser: ^4.0.2
 
 dev_dependencies:
   build_runner: ^2.4.6

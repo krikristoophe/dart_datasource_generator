@@ -17,3 +17,7 @@
 ## 0.0.5
 
 - Update logger to work on web
+
+## 0.0.6
+
+- Export MediaType
