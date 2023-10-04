@@ -21,3 +21,8 @@
 ## 0.0.6
 
 - Export MediaType
+
+## 0.0.7
+
+- Add persistantConnection parameter on http client
+- Add log parameter on request

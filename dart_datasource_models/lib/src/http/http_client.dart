@@ -17,6 +17,7 @@ abstract class HttpClientBase {
   const HttpClientBase({
     this.defaultHeaders = const {},
     this.authInterceptor,
+    this.persistentConnection = true,
   });
 
   /// Default headers sent to every http requests
@@ -24,6 +25,9 @@ abstract class HttpClientBase {
 
   /// Interceptor used to authenticate request if needed
   final AuthInterceptor? authInterceptor;
+
+  /// Whether a persistent connection should be maintained with the server.
+  final bool persistentConnection;
 
   /// Method called to execute request
   Future<HttpResponse> request({
@@ -33,6 +37,7 @@ abstract class HttpClientBase {
     required RequestParameters requestParameters,
     bool authenticate = false,
     bool isMultipart = false,
+    bool log = true,
   });
 
   /// Build request Uri from [endpoint], [path] and [params]
@@ -78,6 +83,7 @@ class HttpClient extends HttpClientBase {
   HttpClient({
     super.defaultHeaders,
     super.authInterceptor,
+    super.persistentConnection = true,
   });
 
   final http.Client _client = http.Client();
@@ -109,6 +115,7 @@ class HttpClient extends HttpClientBase {
     required RequestParameters requestParameters,
     bool authenticate = false,
     bool isMultipart = false,
+    bool log = true,
   }) async {
     final Uri uri = buildUri(
       endpoint: endpoint,
@@ -116,7 +123,9 @@ class HttpClient extends HttpClientBase {
       params: requestParameters,
     );
 
-    _logger.debug('[${method.name.toUpperCase()}] $uri');
+    if (log) {
+      _logger.debug('[${method.name.toUpperCase()}] $uri');
+    }
 
     late http.BaseRequest request;
 
@@ -131,6 +140,8 @@ class HttpClient extends HttpClientBase {
         uri,
       );
     }
+
+    request.persistentConnection = persistentConnection;
 
     final Map<String, String> headers = {
       ...defaultHeaders,

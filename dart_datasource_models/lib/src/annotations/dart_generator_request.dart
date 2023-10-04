@@ -10,6 +10,7 @@ class DartGeneratorRequest {
     this.authenticate = false,
     this.readJsonKey,
     this.mapException,
+    this.log = true,
   });
 
   /// Path of rest api request
@@ -23,6 +24,9 @@ class DartGeneratorRequest {
 
   /// key used to find response data
   final String? readJsonKey;
+
+  /// should request be logged
+  final bool log;
 
   /// custom map of HttpException to another custom Exception
   final Object? Function(
