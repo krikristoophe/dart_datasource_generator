@@ -11,6 +11,7 @@ class DartGeneratorRequestExtension extends DartGeneratorRequest {
     required super.method,
     required super.authenticate,
     required super.readJsonKey,
+    required super.log,
     required this.mapExceptionName,
   });
 
@@ -25,6 +26,8 @@ class DartGeneratorRequestExtension extends DartGeneratorRequest {
     );
 
     final bool authenticate = r.read('authenticate').boolValue;
+
+    final bool log = r.read('log').boolValue;
 
     final ConstantReader readJsonKeyReader = r.read('readJsonKey');
 
@@ -42,6 +45,7 @@ class DartGeneratorRequestExtension extends DartGeneratorRequest {
       authenticate: authenticate,
       readJsonKey: readJsonKey,
       mapExceptionName: mapException,
+      log: log,
     );
   }
 

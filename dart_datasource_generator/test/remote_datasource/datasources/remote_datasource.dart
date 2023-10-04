@@ -51,6 +51,7 @@ class RemoteDatasource with _$RemoteDatasource {
     path: '/todos/ids',
     method: HttpMethod.get,
     mapException: RemoteDatasource._mapExceptions,
+    log: false,
   )
   Future<List<String>> getTodosIds() => _getTodosIds();
 

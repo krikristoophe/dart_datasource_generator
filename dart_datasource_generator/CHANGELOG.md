@@ -21,3 +21,7 @@
 ## 0.0.3
 
 - update pubspec to accept more models version
+
+### 0.0.4
+
+- Update models to generate log request parameter

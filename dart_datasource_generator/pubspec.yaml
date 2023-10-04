@@ -2,7 +2,7 @@ name: dart_datasource_generator
 
 description: Dart package used to automatically generate datasources, repository and models. 
 
-version: 0.0.3
+version: 0.0.4
 
 repository: https://github.com/krikristoophe/dart_datasource_generator/tree/master/dart_datasource_generator
 
@@ -12,7 +12,7 @@ environment:
 dependencies:
   analyzer: '>=5.0.0 <7.0.0'
   build: ^2.4.1
-  dart_datasource_models: '>=0.0.3 <0.1.1'
+  dart_datasource_models: '>=0.0.7 <0.1.1'
   meta: '>=1.9.0 <2.0.0'
   mockito: ^5.4.2
   recase: ^4.1.0

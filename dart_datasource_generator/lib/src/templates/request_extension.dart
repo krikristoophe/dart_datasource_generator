@@ -128,6 +128,7 @@ $returnTypeFutured _$requestName([
       endpoint: environnement.apiEndpoint,
       requestParameters: params,
       authenticate: ${request.authenticate},
+      log: ${request.log},
     );
   } on HttpException catch(${isExceptionUsed ? 'e' : '_'}) {
     $mapException
