@@ -25,3 +25,7 @@
 ### 0.0.4
 
 - Update models to generate log request parameter
+
+### 0.0.5
+
+- Update models to provide http response headers

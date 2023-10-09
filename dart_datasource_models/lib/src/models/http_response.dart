@@ -10,6 +10,7 @@ class HttpResponse {
     required this.statusCode,
     required this.body,
     required this.bytes,
+    required this.headers,
   });
 
   /// Create [HttpResponse] from String body
@@ -17,12 +18,14 @@ class HttpResponse {
   factory HttpResponse.fromBody({
     required int statusCode,
     required String body,
+    required Map<String, String> headers,
   }) {
     final Uint8List bytes = Uint8List.fromList(utf8.encode(body));
     return HttpResponse(
       statusCode: statusCode,
       body: body,
       bytes: bytes,
+      headers: headers,
     );
   }
 
@@ -34,6 +37,9 @@ class HttpResponse {
 
   /// Http response bytes
   final Uint8List bytes;
+
+  /// Http response headers
+  final Map<String, String> headers;
 
   /// Create [HttpResponse] from StreamedResponse
   static Future<HttpResponse> fromStreamedResponse(
@@ -53,6 +59,7 @@ class HttpResponse {
       statusCode: streamedResponse.statusCode,
       body: body,
       bytes: bytes,
+      headers: streamedResponse.headers,
     );
   }
 }

@@ -26,3 +26,7 @@
 
 - Add persistantConnection parameter on http client
 - Add log parameter on request
+
+## 0.0.8
+
+- Add headers to HttpResponse

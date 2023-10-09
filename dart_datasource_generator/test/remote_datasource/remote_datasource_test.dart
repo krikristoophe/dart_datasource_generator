@@ -39,6 +39,7 @@ void main() {
           HttpResponse.fromBody(
             statusCode: 200,
             body: '["todo1", "todo2"]',
+            headers: {},
           ),
         ),
       );
@@ -73,6 +74,7 @@ void main() {
           HttpResponse.fromBody(
             statusCode: 200,
             body: '{"id": "todoId"}',
+            headers: {},
           ),
         ),
       );
@@ -103,6 +105,7 @@ void main() {
           HttpResponse.fromBody(
             statusCode: 200,
             body: '[{"id": "todoId1"}, {"id": "todoId2"}]',
+            headers: {},
           ),
         ),
       );
@@ -133,6 +136,7 @@ void main() {
           HttpResponse.fromBody(
             statusCode: 200,
             body: '{"todos": [{"id": "todoId1"}, {"id": "todoId2"}]}',
+            headers: {},
           ),
         ),
       );
@@ -165,6 +169,7 @@ void main() {
               statusCode: 200,
               body: '{"id": "todoId"}',
               bytes: Uint8List(0),
+              headers: {},
             ),
           ),
         );
@@ -195,6 +200,7 @@ void main() {
             HttpResponse.fromBody(
               statusCode: 200,
               body: '{"count": 5}',
+              headers: {},
             ),
           ),
         );
@@ -226,6 +232,7 @@ void main() {
           HttpResponse.fromBody(
             statusCode: 500,
             body: '',
+            headers: {},
           ),
         ),
       );
