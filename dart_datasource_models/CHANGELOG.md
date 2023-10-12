@@ -30,3 +30,7 @@
 ## 0.0.8
 
 - Add headers to HttpResponse
+
+## 0.0.9
+
+- Uppercase http methods

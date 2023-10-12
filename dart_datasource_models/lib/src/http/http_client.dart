@@ -131,12 +131,12 @@ class HttpClient extends HttpClientBase {
 
     if (isMultipart) {
       request = http.MultipartRequest(
-        method.name,
+        method.name.toUpperCase(),
         uri,
       );
     } else {
       request = http.Request(
-        method.name,
+        method.name.toUpperCase(),
         uri,
       );
     }
